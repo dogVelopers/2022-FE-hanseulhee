@@ -1,30 +1,30 @@
 import { useEffect, useState } from 'react';
 import { instance } from '../libs/api';
 
-interface FieldsInterface {
+interface IFields {
   name: string;
 }
 
-interface IList {
+interface ITodoList {
   id: string;
   createdTime: string;
-  fields: FieldsInterface;
+  fields: IFields;
 }
 
 function ListSection() {
-  const [data, setData] = useState<IList[]>([]);
+  const [todo, setTodo] = useState<ITodoList[]>([]);
 
   useEffect(() => {
     async function getList() {
       const result = await instance.get('/todo');
-      setData(result.data.records);
+      setTodo(result.data.records);
     }
     getList();
   }, []);
 
   return (
     <section>
-      {data.map(record => (
+      {todo.map(record => (
         <span key={record.id}>{record.fields.name}</span>
       ))}
     </section>
