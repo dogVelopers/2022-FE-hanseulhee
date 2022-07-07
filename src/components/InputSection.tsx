@@ -1,4 +1,4 @@
-export default function InputSection() {
+function InputSection() {
   return (
     <section>
       <input />
@@ -6,3 +6,5 @@ export default function InputSection() {
     </section>
   );
 }
+
+export default InputSection;
