@@ -1,16 +1,49 @@
-import InputSection from './components/InputSection';
-import ListSection from './components/ListSection';
-import useTodos from './hooks/api/useTodos';
+import styled from 'styled-components';
+import Nav from './components/Nav';
+import KakaoTalk from './components/KakaoTalk';
+import Terminal from './components/ToDo/Terminal';
+import GlobalStyle from './styles/GlobalStyle';
 
 function App() {
   // option shift F
-  const { createTodo, todos } = useTodos();
   return (
     <>
-      <InputSection createTodo={createTodo} />
-      <ListSection todos={todos} />
+      <GlobalStyle />
+      <StyledSizeWrapper>
+        <Nav />
+        <StyledItemWrapper>
+          <StyledKakaoWrapper>
+            <KakaoTalk nickName="슬희" message="화이팅하세용" />
+            <KakaoTalk nickName="개발자" message="응원해요" />
+            <KakaoTalk nickName="개발자들" message="👍🏻👍🏻👍🏻👍🏻👍🏻" />
+          </StyledKakaoWrapper>
+          <Terminal />
+        </StyledItemWrapper>
+      </StyledSizeWrapper>
     </>
   );
 }
 
 export default App;
+
+const StyledSizeWrapper = styled.main`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+`;
+
+const StyledItemWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+`;
+
+const StyledKakaoWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-right: 5rem;
+  height: 30rem;
+  overflow-y: scroll;
+`;
