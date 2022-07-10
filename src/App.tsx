@@ -13,9 +13,10 @@ function App() {
         <Nav />
         <StyledItemWrapper>
           <StyledKakaoWrapper>
-            <KakaoTalk nickName="슬희" message="화이팅하세용" />
+            <KakaoTalk nickName="슬희" message="화이팅입니당" />
             <KakaoTalk nickName="개발자" message="응원해요" />
             <KakaoTalk nickName="개발자들" message="👍🏻👍🏻👍🏻👍🏻👍🏻" />
+            <KakaoTalk nickName="FE" message="좋은 하루 되세요 !" />
           </StyledKakaoWrapper>
           <Terminal />
         </StyledItemWrapper>
