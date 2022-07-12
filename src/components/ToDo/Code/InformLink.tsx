@@ -26,6 +26,6 @@ const StyledEachUrl = styled.div`
 
 const StyledALink = styled.a`
   &:hover {
-    border-bottom: 0.02rem solid #8f8f8f;
+    text-decoration: underline;
   }
 `;

@@ -30,7 +30,7 @@ export default InputSection;
 const StyledPath = styled.span`
   padding: 0.1rem 0.3rem;
   margin-right: 1rem;
-  background-color: #008aff;
+  background-color: #c8aa00;
   font-size: 0.8rem;
   border-radius: 0px 10px 100px 0;
 `;
