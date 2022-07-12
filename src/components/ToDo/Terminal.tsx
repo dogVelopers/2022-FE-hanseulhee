@@ -33,7 +33,7 @@ const StyledContainer = styled.div`
   border-radius: 0.7rem;
 `;
 
-const StyledNav = styled.nav`
+const StyledNav = styled.div`
   position: sticky;
   top: 0;
   width: 100%;

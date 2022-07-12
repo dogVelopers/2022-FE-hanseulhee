@@ -2,14 +2,14 @@ import styled from 'styled-components';
 import Nav from './components/Nav';
 import KakaoTalk from './components/KakaoTalk';
 import Terminal from './components/ToDo/Terminal';
-import GlobalStyle from './styles/GlobalStyle';
+import { StyledGlobal } from './styles/GlobalStyle';
 
 function App() {
   // option shift F
   return (
     <>
-      <GlobalStyle />
-      <StyledSizeWrapper>
+      <StyledGlobal />
+      <StyledSizeMain>
         <Nav />
         <StyledItemWrapper>
           <StyledKakaoWrapper>
@@ -20,14 +20,14 @@ function App() {
           </StyledKakaoWrapper>
           <Terminal />
         </StyledItemWrapper>
-      </StyledSizeWrapper>
+      </StyledSizeMain>
     </>
   );
 }
 
 export default App;
 
-const StyledSizeWrapper = styled.main`
+const StyledSizeMain = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
