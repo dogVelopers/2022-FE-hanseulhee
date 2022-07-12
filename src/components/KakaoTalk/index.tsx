@@ -9,7 +9,7 @@ interface Props {
 function KakaoTalk({ nickName, message }: Props) {
   return (
     <StyledSizeWrapper>
-      <StyledKakaoImg src={kakaoLogo} alt="img" />
+      <StyledKakaoImg src={kakaoLogo} alt="kakaoTalk logo" />
       <StyledInfromWrapper>
         <StyledName>{nickName}</StyledName>
         <StyledSummary>{message}</StyledSummary>
