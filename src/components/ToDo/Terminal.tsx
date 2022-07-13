@@ -30,7 +30,7 @@ const StyledContainer = styled.div`
   height: 40%;
   width: 60%;
   background-color: rgb(30, 30, 30);
-  border-radius: 0.7rem;
+  border-radius: 15px;
 `;
 
 const StyledNav = styled.div`
