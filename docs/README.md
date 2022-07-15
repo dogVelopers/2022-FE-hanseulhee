@@ -1,6 +1,6 @@
 # Studying
-공부한 것을 기록합니다.
 
+공부한 것을 기록합니다.
 
 ## HTTP Method
 
@@ -20,3 +20,8 @@ DELETE : 리소스 삭제
 
 - SWR
 - React Query
+
+## as const
+
+readonly, 바꿀 수 없고 읽을 수만 있는 값일 때 사용한다.
+[Colors.ts](../src/styles/Colors.ts)
