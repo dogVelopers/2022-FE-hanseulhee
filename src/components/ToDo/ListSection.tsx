@@ -1,16 +1,26 @@
 import styled from 'styled-components';
+import colors from '../../styles/Colors';
+import font from '../../styles/Font';
 
 interface Props {
   todos: ITodo[];
+  deleteTodo: (id: string) => void;
 }
 
-function ListSection({ todos }: Props) {
+function ListSection({ todos, deleteTodo }: Props) {
+  function onClickDeleteBtn(id: string) {
+    if (confirm('삭제하시겠습니까?')) {
+      deleteTodo(id);
+    }
+  }
+
   return (
     <StyledSection>
       {todos.map(todo => (
         <StyledCommand key={todo.id}>
           <StyledPath>~/Documents/todo</StyledPath>
           {todo.fields.name}
+          <StyledDeleteBtn onClick={() => onClickDeleteBtn(todo.id)}>X</StyledDeleteBtn>
         </StyledCommand>
       ))}
     </StyledSection>
@@ -32,7 +42,13 @@ const StyledCommand = styled.div`
 const StyledPath = styled.span`
   padding: 0.1rem 0.3rem;
   margin-right: 1rem;
-  background-color: #008aff;
+  background-color: ${colors.blue};
   font-size: 0.8rem;
   border-radius: 0px 10px 100px 0;
+`;
+
+const StyledDeleteBtn = styled.button`
+  position: relative;
+  font-weight: ${font.bold};
+  right: -1rem;
 `;

@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import kakaoLogo from '../../images/kakao.png';
+import colors from '../../styles/Colors';
+import font from '../../styles/Font';
 
 interface Props {
   nickName: string;
@@ -34,7 +36,7 @@ const StyledSizeWrapper = styled.section`
   margin-bottom: 0.6rem;
 
   border: 1px solid #58585a;
-  background-color: rgb(58, 58, 58);
+  background-color: ${colors.grey300};
   color: white;
   cursor: pointer;
 `;
@@ -55,10 +57,10 @@ const StyledInfromWrapper = styled.div`
 
 const StyledName = styled.span`
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: ${font.bold};
 `;
 
 const StyledSummary = styled.span`
   font-size: 0.9rem;
-  font-weight: 300;
+  font-weight: ${font.light};
 `;

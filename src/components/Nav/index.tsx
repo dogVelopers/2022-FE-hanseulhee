@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import colors from '../../styles/Colors';
 
 function Nav() {
   return (
@@ -24,5 +25,5 @@ const StyledLine = styled.div`
 
 const StyledTitle = styled.h1`
   font-size: 3rem;
-  color: white;
+  color: ${colors.white};
 `;

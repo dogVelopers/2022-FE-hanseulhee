@@ -1,6 +1,7 @@
 import { FormEvent } from 'react';
 import useTextInput from '../../hooks/useTextInput';
 import styled from 'styled-components';
+import colors from '../../styles/Colors';
 
 interface Props {
   createTodo: (value: string) => void;
@@ -30,7 +31,7 @@ export default InputSection;
 const StyledPath = styled.span`
   padding: 0.1rem 0.3rem;
   margin-right: 1rem;
-  background-color: #c8aa00;
+  background-color: ${colors.yellow};
   font-size: 0.8rem;
   border-radius: 0px 10px 100px 0;
 `;
