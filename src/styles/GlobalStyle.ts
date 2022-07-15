@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import colors from './Colors';
 
 export const StyledGlobal = createGlobalStyle`
   * {
@@ -16,11 +17,11 @@ export const StyledGlobal = createGlobalStyle`
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-color: black;
-    color: #faebd7;
+    background-color: ${colors.black};
+    color: ${colors.beige}
   }
 
-  a, input{
+  a, input, button{
     all: unset;
     cursor: pointer;
   }
