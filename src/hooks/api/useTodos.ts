@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
 import { instance } from '../../libs/api';
+import { useRecoilState } from 'recoil';
+import { todosState } from '../../store/todos';
 
 interface IGetTodos {
   records: ITodo[];
 }
 
 function useTodos() {
-  const [todos, setTodos] = useState<ITodo[]>([]);
+  const [todos, setTodos] = useRecoilState(todosState);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   async function refreshTodos() {

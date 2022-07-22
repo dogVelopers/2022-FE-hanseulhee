@@ -7,7 +7,7 @@ import Greetings from './Code/Greetings';
 import colors from '../../styles/Colors';
 
 function Terminal() {
-  const { createTodo, todos, deleteTodo, isLoading } = useTodos();
+  const { isLoading } = useTodos();
 
   return (
     <StyledContainer>
@@ -17,8 +17,8 @@ function Terminal() {
       </StyledNav>
       <StyledTerminalBoard>
         <Greetings />
-        <InputSection createTodo={createTodo} />
-        <ListSection todos={todos} deleteTodo={deleteTodo} />
+        <InputSection />
+        <ListSection />
       </StyledTerminalBoard>
       {/* {isLoading ? <StyledLoader /> : <></>} */}
       {isLoading && <StyledLoader />}
