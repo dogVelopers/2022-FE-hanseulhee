@@ -2,15 +2,15 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { instance } from '../libs/api';
 import styled from 'styled-components';
-import colors from '../styles/Colors';
 import font from '../styles/Font';
-import { Link } from 'react-router-dom';
 import Nav from '../components/Nav';
 import Terminal from '../components/Detail/Terminal';
+import useTodos from '../hooks/api/useTodos';
 
 function Detail() {
   const [todo, setTodo] = useState<ITodo | null>(null);
   const { todoId } = useParams();
+  const { isLoading } = useTodos();
 
   useEffect(() => {
     async function saveTodo() {
@@ -26,6 +26,7 @@ function Detail() {
       <StyledItemInWrapper>
         <Terminal todos={todo?.fields.name} />
       </StyledItemInWrapper>
+      {isLoading && <StyledLoader />}
     </StyledItemWrapper>
   );
 }
@@ -46,26 +47,14 @@ const StyledItemInWrapper = styled.div`
   width: 100%;
 `;
 
-const StyledContentWrapper = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: auto;
-`;
-
-const StyledIntroText = styled.h1`
-  font-size: 1.3rem;
-  letter-spacing: 0.02px;
-  font-weight: ${font.bold};
-`;
-
-const StyledSubSummary = styled.span`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.8rem;
-  font-weight: ${font.light};
-  margin: 1rem 0 1.6rem 0;
+const StyledLoader = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  opacity: 0.5;
 `;
