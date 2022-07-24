@@ -6,7 +6,7 @@ import Terminal from '../components/ToDo/Terminal';
 function Main() {
   return (
     <StyledSizeMain>
-      <Nav />
+      <Nav title="Dogveloper" />
       <StyledItemWrapper>
         <StyledKakaoWrapper>
           <KakaoTalk nickName="슬희" message="화이팅입니당" />

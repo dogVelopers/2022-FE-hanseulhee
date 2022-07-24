@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 import colors from '../../styles/Colors';
 
-function Nav() {
+interface Props {
+  title?: string;
+}
+
+function Nav({ title }: Props) {
   return (
     <StyledNav>
       <StyledLine></StyledLine>
-      <StyledTitle>Dogveloper</StyledTitle>
+      <StyledTitle>{title}</StyledTitle>
     </StyledNav>
   );
 }
