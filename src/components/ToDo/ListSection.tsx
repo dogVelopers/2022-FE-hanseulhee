@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import useTodos from '../../hooks/api/useTodos';
 import colors from '../../styles/Colors';
-import font from '../../styles/Font';
+import fontWeight from '../../styles/Font';
 import { Link } from 'react-router-dom';
 
 function ListSection() {
@@ -48,6 +48,6 @@ const StyledPath = styled.span`
 
 const StyledDeleteBtn = styled.button`
   position: relative;
-  font-weight: ${font.bold};
+  font-weight: ${fontWeight.bold};
   right: -1rem;
 `;
