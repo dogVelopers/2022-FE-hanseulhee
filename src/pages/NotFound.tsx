@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import colors from '../styles/Colors';
-import font from '../styles/Font';
+import fontWeight from '../styles/Font';
 import { Link } from 'react-router-dom';
 
 function NotFound() {
   return (
-    <StyledItemWrapper>
-      <StyledItemInWrapper>
+    <StyledMainItemWrapper>
+      <StyledMainInDivWrapper>
         <StyledContentWrapper>
           <StyledIntroText>헉! 페이지를 찾을 수 없어요.</StyledIntroText>
           <StyledSubSummary>
@@ -17,20 +17,20 @@ function NotFound() {
         <Link to={'/'}>
           <StyledMainButton>메인으로 돌아가기</StyledMainButton>
         </Link>
-      </StyledItemInWrapper>
-    </StyledItemWrapper>
+      </StyledMainInDivWrapper>
+    </StyledMainItemWrapper>
   );
 }
 
 export default NotFound;
 
-const StyledItemWrapper = styled.main`
+const StyledMainItemWrapper = styled.main`
   width: 100%;
   min-height: 100%;
   margin: 9rem auto;
 `;
 
-const StyledItemInWrapper = styled.div`
+const StyledMainInDivWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,7 +48,7 @@ const StyledContentWrapper = styled.div`
 const StyledIntroText = styled.h1`
   font-size: 1.3rem;
   letter-spacing: 0.02px;
-  font-weight: ${font.bold};
+  font-weight: ${fontWeight.bold};
 `;
 
 const StyledSubSummary = styled.span`
@@ -57,7 +57,7 @@ const StyledSubSummary = styled.span`
   justify-content: center;
   align-items: center;
   font-size: 0.8rem;
-  font-weight: ${font.light};
+  font-weight: ${fontWeight.light};
   margin: 1rem 0 1.6rem 0;
 `;
 
@@ -68,5 +68,5 @@ const StyledMainButton = styled.button`
   border-radius: 5px;
   background-color: ${colors.grey300};
   font-size: 0.75rem;
-  font-weight: ${font.normal};
+  font-weight: ${fontWeight.normal};
 `;
