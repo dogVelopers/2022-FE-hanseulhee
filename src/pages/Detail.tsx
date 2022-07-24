@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { instance } from '../libs/api';
 import styled from 'styled-components';
-import font from '../styles/Font';
 import Nav from '../components/Nav';
 import Terminal from '../components/Detail/Terminal';
 import useTodos from '../hooks/api/useTodos';

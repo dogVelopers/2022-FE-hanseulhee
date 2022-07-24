@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import CircleButton from '../ToDo/CircleButton';
 import colors from '../../styles/Colors';
 import InformLink from '../ToDo/Code/InformLink';
-import font from '../../styles/Font';
+import fontWeight from '../../styles/Font';
 import Memo from './Memo';
 
 interface Props {
@@ -84,5 +84,5 @@ const StyledPath = styled.span`
 
 const StyledTodoContent = styled.span`
   font-size: 1.1rem;
-  font-weight: ${font.normal};
+  font-weight: ${fontWeight.normal};
 `;
