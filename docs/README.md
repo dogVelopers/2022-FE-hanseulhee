@@ -52,3 +52,15 @@ const 저장하는 콜백 = useSetRecoilState()
 ## React Router
 
 [router](https://reactrouter.com/docs/en/v6/getting-started/overview)
+
+## 배포
+
+- aws s3
+
+- saas
+
+- vercel
+
+- cloudflare
+
+- netlify
