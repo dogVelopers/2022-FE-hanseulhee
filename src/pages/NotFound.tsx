@@ -8,7 +8,7 @@ function NotFound() {
     <StyledMainItemWrapper>
       <StyledMainInDivWrapper>
         <StyledContentWrapper>
-          <StyledIntroText>헉! 페이지를 찾을 수 없어요.</StyledIntroText>
+          <StyledIntroText>페이지를 찾을 수 없어요.</StyledIntroText>
           <StyledSubSummary>
             <span>요청하신 결과를 찾을 수 없어요.</span>
             <span>입력한 URL이 올바른지 확인해주세요.</span>
